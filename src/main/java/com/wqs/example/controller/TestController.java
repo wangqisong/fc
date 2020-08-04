@@ -37,8 +37,8 @@ public class TestController {
         return ResponseEntity.ok().body(msg);
     }
 
-    @GetMapping("/findOrderById/{id}")
-    public ResponseEntity findOrderById(@PathVariable("id") Integer id) {
+    @GetMapping("/findOrderByPathId/{id}")
+    public ResponseEntity findOrderByPathId(@PathVariable("id") Integer id) {
         Optional<TOrder> oneOrderById = orderMapper.findOneOrderById(id);
         if (oneOrderById.isPresent()){
             TOrder tOrder = oneOrderById.get();
@@ -46,6 +46,16 @@ public class TestController {
         }else{
             return ResponseEntity.ok().body("no data");
         }
+    }
 
+    @GetMapping("/findOrderById")
+    public ResponseEntity findOrderById(@RequestParam("id") Integer id) {
+        Optional<TOrder> oneOrderById = orderMapper.findOneOrderById(id);
+        if (oneOrderById.isPresent()){
+            TOrder tOrder = oneOrderById.get();
+            return ResponseEntity.ok(tOrder);
+        }else{
+            return ResponseEntity.ok().body("no data");
+        }
     }
 }
