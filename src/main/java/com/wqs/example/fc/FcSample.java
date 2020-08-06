@@ -22,10 +22,10 @@ public class FcSample {
         String accessSecretKey = System.getenv("SECRET_KEY");
         String accountId = System.getenv("ACCOUNT_ID");
         String role = System.getenv("ROLE");
-
-        accountId="1762282430388407";
-        accessKey="LTAI4GDvUPsruAo3REofJtUS";
-        accessSecretKey="U9P0b1iHA7zO1UflyM6jkp3oyuP2p1";
+        //需要自己注册阿里云账号获取
+        accountId="";
+        accessKey="";
+        accessSecretKey="";
         // Initialize FC client
         FunctionComputeClient fcClient = new FunctionComputeClient(REGION, accountId, accessKey, accessSecretKey);
 
