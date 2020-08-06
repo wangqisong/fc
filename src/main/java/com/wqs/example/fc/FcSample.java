@@ -12,7 +12,7 @@ import java.net.HttpURLConnection;
  * 通过sdk 工具包 操作服务，函数，同步/异步调用函数
  */
 public class FcSample {
-    private static final String CODE_DIR = "D:\\workspace\\projectdemo\\function\\src\\main\\resources";
+//    private static final String CODE_DIR = "D:\\workspace\\projectdemo\\function\\src\\main\\resources";
     private static final String REGION = "cn-chengdu";
     private static final String SERVICE_NAME = "test_service";
     private static final String FUNCTION_NAME = "test_function";
@@ -23,9 +23,10 @@ public class FcSample {
         String accountId = System.getenv("ACCOUNT_ID");
         String role = System.getenv("ROLE");
 
-        accountId="1762282430388407";
-        accessKey="LTAI4GDvUPsruAo3REofJtUS";
-        accessSecretKey="U9P0b1iHA7zO1UflyM6jkp3oyuP2p1";
+        //需要自己注册阿里云账号获取
+        accountId="";
+        accessKey="";
+        accessSecretKey="";
         // Initialize FC client
         FunctionComputeClient fcClient = new FunctionComputeClient(REGION, accountId, accessKey, accessSecretKey);
 
