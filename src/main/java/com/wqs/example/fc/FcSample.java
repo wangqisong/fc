@@ -23,7 +23,7 @@ public class FcSample {
         String accountId = System.getenv("ACCOUNT_ID");
         String role = System.getenv("ROLE");
         //需要自己注册阿里云账号获取
-        accountId="";
+        accountId= "";
         accessKey="";
         accessSecretKey="";
         // Initialize FC client
